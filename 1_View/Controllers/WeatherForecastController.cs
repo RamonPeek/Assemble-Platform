@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using _2_Managers.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace _1_View.Controllers
@@ -23,10 +25,13 @@ namespace _1_View.Controllers
             _logger = logger;
         }
 
+        private readonly ICharacterManager CharacterManager;
+
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
+            CharacterManager.GetCharacterByName("Ramon");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
@@ -34,6 +39,12 @@ namespace _1_View.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [ActivatorUtilitiesConstructor]
+        public WeatherForecastController(ICharacterManager characterManager)
+        {
+            this.CharacterManager = characterManager;
         }
     }
 }

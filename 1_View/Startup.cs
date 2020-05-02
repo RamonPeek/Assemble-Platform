@@ -1,3 +1,8 @@
+using _2_Managers;
+using _2_Managers.Interfaces;
+using _3_Repositories;
+using _4_DAL.Marvel;
+using _4_DAL.Mock;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +31,9 @@ namespace _1_View
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddSingleton<IUserManager>(new UserManager(new UserRepo(new UserMockContext())));
+            services.AddSingleton<IAccountManager>(new AccountManager(new AccountRepo(new AccountMockContext())));
+            services.AddSingleton<ICharacterManager>(new CharacterManager(new CharacterRepo(new CharacterMarvelContext())));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
