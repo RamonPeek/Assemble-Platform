@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _5_Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +7,6 @@ namespace _5_Models
 {
     public class Character
     {
-
         public String Name { get; set; }
         public String Description { get; set; }
         public String Thumbnail { get; set; }
