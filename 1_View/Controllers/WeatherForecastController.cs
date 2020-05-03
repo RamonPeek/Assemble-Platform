@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using _2_Managers.Interfaces;
+using _5_Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -28,10 +29,11 @@ namespace _1_View.Controllers
         private readonly ICharacterManager CharacterManager;
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<IEnumerable<WeatherForecast>> GetAsync()
         {
             var rng = new Random();
-            CharacterManager.GetCharacterByName("Ramon");
+            Character character = await CharacterManager.GetCharacterByName("Spider-man");
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
