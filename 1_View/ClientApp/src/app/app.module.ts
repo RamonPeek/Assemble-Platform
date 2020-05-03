@@ -15,6 +15,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { SearchComponent } from './components/search/search.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavigationSideComponent } from './components/navigation-side/navigation-side.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NavigationSideComponent } from './components/navigation-side/navigation
     SearchComponent,
     FooterComponent,
     NavigationSideComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -34,6 +36,7 @@ import { NavigationSideComponent } from './components/navigation-side/navigation
     MatIconModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'about', component: AboutComponent }
     ]),
     BrowserAnimationsModule
   ],

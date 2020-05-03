@@ -1,8 +1,24 @@
 <nav class="navigation_side_container">
     <p class="navigation_side_header_text">Quick navigation</p>
-    <a href="#">
+    <a routerLink="/">
         <div class="navigation_side_item_container">
-            <mat-icon class="navigation_side_header_icon">home</mat-icon><p class="navigation_side_header_item">Home</p>
+            <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">home</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Home</p>
         </div>
     </a>
+    <a routerLink="/about">
+        <div class="navigation_side_item_container">
+            <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">contact_support</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">About</p>
+        </div>
+    </a><br>
+    <p class="navigation_side_header_text">Teams</p>
+    <a routerLink="#">
+        <div class="navigation_side_item_container">
+            <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">search</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Find a team</p>
+        </div>
+    </a>
+    <a routerLink="#">
+        <div class="navigation_side_item_container">
+            <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">add</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Create a team</p>
+        </div>
+    </a><br>
 </nav>

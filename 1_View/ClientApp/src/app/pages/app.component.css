@@ -1,5 +1,17 @@
 .app_container {
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 190px);
+    height: calc(100% - 105px);
+    position: fixed;
+    top: 65px;
+    left: 190px;
     background-color: rgb(123, 31, 162);
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1250px) {
+    .app_container {
+        width: 100%;
+        left: 0;
+        height: calc(100% - 115px);
+    }
 }
