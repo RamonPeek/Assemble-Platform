@@ -1,0 +1,6 @@
+.search_bar_container {
+    margin-left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 50px) !important;
+    color: white;
+}
