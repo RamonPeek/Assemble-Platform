@@ -19,14 +19,11 @@
     padding-top: 3px;
 }
 
-.navigation_side_item_container:hover {
-    background-color: rgb(15, 15, 15);
-}
-
 .navigation_side_header_text {
     font-size: 8pt;
     color: rgb(112, 112, 112);
     padding-bottom: 10px;
+    padding-top: 5px;
 }
 
 .navigation_side_header_icon {
@@ -44,13 +41,30 @@
 
 @media only screen and (max-width: 1250px) {
     .navigation_side_container {
-        width: 100%;
+        width: 110%;
         height: 50px;
         top: unset;
         bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .navigation_side_item_container {
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
     }
 
     .navigation_side_header_text {
+        display: none;
+    }
+
+    .navigation_side_header_icon {
+        font-size: 20pt;
+    }
+    
+    .navigation_side_header_item {
         display: none;
     }
 }
