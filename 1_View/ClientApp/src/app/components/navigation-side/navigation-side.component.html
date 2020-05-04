@@ -5,7 +5,7 @@
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">home</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Home</p>
         </div>
     </a>
-    <a routerLink="/about" class="mobile_icon">
+    <a routerLink="/about" class="mobile_icon_dissapear_1">
         <div class="navigation_side_item_container">
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">contact_support</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">About</p>
         </div>
@@ -32,7 +32,7 @@
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">person</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">My profile</p>
         </div>
     </a>
-    <a routerLink="/settings" *ngIf="devAuthService.isLoggedIn()">
+    <a routerLink="/settings" *ngIf="devAuthService.isLoggedIn()" class="mobile_icon_dissapear_2">
         <div class="navigation_side_item_container">
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">settings</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Settings</p>
         </div>
