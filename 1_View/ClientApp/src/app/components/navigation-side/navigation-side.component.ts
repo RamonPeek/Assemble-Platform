@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/pages/app.component';
 
 @Component({
   selector: 'app-navigation-side',
@@ -6,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation-side.component.css']
 })
 export class NavigationSideComponent implements OnInit {
-
-  constructor() { }
 
   ngOnInit() {
   }

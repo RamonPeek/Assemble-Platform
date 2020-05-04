@@ -36,7 +36,8 @@ import { AboutComponent } from './pages/about/about.component';
     MatIconModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'about', component: AboutComponent }
+      { path: '**', component: HomeComponent},
+      { path: 'about', component: AboutComponent },
     ]),
     BrowserAnimationsModule
   ],

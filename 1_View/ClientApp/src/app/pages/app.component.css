@@ -8,10 +8,22 @@
     padding: 10px;
 }
 
+.dev_authorize_button {
+    background-color: rgb(26, 25, 25);
+    color: white;
+    position: fixed;
+    right: 10px;
+    bottom: 55px;
+}
+
 @media only screen and (max-width: 1250px) {
     .app_container {
         width: 100%;
         left: 0;
         height: calc(100% - 115px);
+    }
+    
+    .dev_authorize_button {
+        bottom: 65px;
     }
 }
