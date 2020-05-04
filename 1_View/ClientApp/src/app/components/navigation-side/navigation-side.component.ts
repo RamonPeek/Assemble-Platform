@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/pages/app.component';
+import { DevAuthService } from 'src/app/services/DevAuth/dev-auth.service';
 
 @Component({
   selector: 'app-navigation-side',
@@ -8,7 +9,11 @@ import { AppComponent } from 'src/app/pages/app.component';
 })
 export class NavigationSideComponent implements OnInit {
 
-  ngOnInit() {
+  constructor(private devAuthService: DevAuthService) {
+
   }
 
+  ngOnInit() {
+  }
+  
 }

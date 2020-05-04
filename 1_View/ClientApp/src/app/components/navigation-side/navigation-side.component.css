@@ -67,4 +67,8 @@
     .navigation_side_header_item {
         display: none;
     }
+
+    .mobile_icon {
+        display: none;
+    }
 }

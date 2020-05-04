@@ -5,7 +5,7 @@
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">home</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Home</p>
         </div>
     </a>
-    <a routerLink="/about">
+    <a routerLink="/about" class="mobile_icon">
         <div class="navigation_side_item_container">
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">contact_support</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">About</p>
         </div>
@@ -16,33 +16,33 @@
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">search</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Find a team</p>
         </div>
     </a>
-    <a routerLink="/team/create">
+    <a routerLink="/team/create" *ngIf="devAuthService.isLoggedIn()">
         <div class="navigation_side_item_container">
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">add</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Create a team</p>
         </div>
     </a>
     <p class="navigation_side_header_text">Account</p>
-    <a routerLink="/login">
+    <a routerLink="/login" *ngIf="!devAuthService.isLoggedIn()">
         <div class="navigation_side_item_container">
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">exit_to_app</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Login</p>
         </div>
     </a>
-    <a routerLink="/user/MockUser">
+    <a routerLink="/user/MockUser" *ngIf="devAuthService.isLoggedIn()">
         <div class="navigation_side_item_container">
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">person</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">My profile</p>
         </div>
     </a>
-    <a routerLink="/settings">
+    <a routerLink="/settings" *ngIf="devAuthService.isLoggedIn()">
         <div class="navigation_side_item_container">
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">settings</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Settings</p>
         </div>
     </a>
-    <a routerLink="/logout">
+    <a routerLink="/logout" *ngIf="devAuthService.isLoggedIn()">
         <div class="navigation_side_item_container">
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">power_settings_new</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Logout</p>
         </div>
     </a>
-    <a routerLink="/register">
+    <a routerLink="/register" *ngIf="!devAuthService.isLoggedIn()">
         <div class="navigation_side_item_container">
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">person_add</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Register</p>
         </div>

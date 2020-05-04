@@ -3,7 +3,12 @@
   <app-navigation-side></app-navigation-side>
   <router-outlet></router-outlet>
   <app-footer></app-footer>
-  <button mat-fab class="dev_authorize_button" (click)="toggleAuthorization()">
+
+  <!-- DEV Purposes -->
+  <button mat-fab class="dev_authorize_button_online" (click)="toggleLoginStatus()" *ngIf="devAuthService.isLoggedIn()">
+    <mat-icon>remove_red_eye</mat-icon>
+  </button>
+  <button mat-fab class="dev_authorize_button_offline" (click)="toggleLoginStatus()" *ngIf="!devAuthService.isLoggedIn()">
     <mat-icon>remove_red_eye</mat-icon>
   </button>
 </div>

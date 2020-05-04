@@ -8,9 +8,17 @@
     padding: 10px;
 }
 
-.dev_authorize_button {
+.dev_authorize_button_online {
     background-color: rgb(26, 25, 25);
-    color: white;
+    color: green;
+    position: fixed;
+    right: 10px;
+    bottom: 55px;
+}
+
+.dev_authorize_button_offline {
+    background-color: rgb(26, 25, 25);
+    color: red;
     position: fixed;
     right: 10px;
     bottom: 55px;
@@ -23,7 +31,12 @@
         height: calc(100% - 115px);
     }
     
-    .dev_authorize_button {
+    .dev_authorize_button_online {
         bottom: 65px;
     }
+
+    .dev_authorize_button_offline {
+        bottom: 65px;
+    }
+
 }
