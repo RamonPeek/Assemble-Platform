@@ -16,6 +16,13 @@ import { SearchComponent } from './components/search/search.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavigationSideComponent } from './components/navigation-side/navigation-side.component';
 import { AboutComponent } from './pages/about/about.component';
+import { CreateTeamComponent } from './pages/create-team/create-team.component';
+import { SearchTeamComponent } from './pages/search-team/search-team.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { SettingsComponent } from './pages/settings/settings.component';
+import { LogoutComponent } from './pages/logout/logout.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +33,13 @@ import { AboutComponent } from './pages/about/about.component';
     FooterComponent,
     NavigationSideComponent,
     AboutComponent,
+    CreateTeamComponent,
+    SearchTeamComponent,
+    LoginComponent,
+    ProfileComponent,
+    SettingsComponent,
+    LogoutComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -36,8 +50,15 @@ import { AboutComponent } from './pages/about/about.component';
     MatIconModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: '**', component: HomeComponent},
       { path: 'about', component: AboutComponent },
+      { path: 'team/create', component: CreateTeamComponent },
+      { path: 'team/search', component: SearchTeamComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'user/:username', component: ProfileComponent },
+      { path: 'settings', component: SettingsComponent },
+      { path: 'logout', component: LogoutComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: '**', component: HomeComponent }
     ]),
     BrowserAnimationsModule
   ],

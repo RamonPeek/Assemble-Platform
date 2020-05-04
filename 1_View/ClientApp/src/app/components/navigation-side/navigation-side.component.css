@@ -41,7 +41,7 @@
 
 @media only screen and (max-width: 1250px) {
     .navigation_side_container {
-        width: 110%;
+        width: 100%;
         height: 50px;
         top: unset;
         bottom: 0;

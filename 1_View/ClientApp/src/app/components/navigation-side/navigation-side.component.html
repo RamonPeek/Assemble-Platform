@@ -11,14 +11,41 @@
         </div>
     </a>
     <p class="navigation_side_header_text">Teams</p>
-    <a routerLink="#">
+    <a routerLink="/team/search">
         <div class="navigation_side_item_container">
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">search</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Find a team</p>
         </div>
     </a>
-    <a routerLink="#">
+    <a routerLink="/team/create">
         <div class="navigation_side_item_container">
             <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">add</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Create a team</p>
         </div>
-    </a><br>
+    </a>
+    <p class="navigation_side_header_text">Account</p>
+    <a routerLink="/login">
+        <div class="navigation_side_item_container">
+            <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">exit_to_app</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Login</p>
+        </div>
+    </a>
+    <a routerLink="/user/MockUser">
+        <div class="navigation_side_item_container">
+            <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">person</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">My profile</p>
+        </div>
+    </a>
+    <a routerLink="/settings">
+        <div class="navigation_side_item_container">
+            <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">settings</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Settings</p>
+        </div>
+    </a>
+    <a routerLink="/logout">
+        <div class="navigation_side_item_container">
+            <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">power_settings_new</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Logout</p>
+        </div>
+    </a>
+    <a routerLink="/register">
+        <div class="navigation_side_item_container">
+            <mat-icon routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_icon">person_add</mat-icon><p routerLinkActive="router_link_active" [routerLinkActiveOptions]="{exact: true}" class="navigation_side_header_item">Register</p>
+        </div>
+    </a>
+    
 </nav>
