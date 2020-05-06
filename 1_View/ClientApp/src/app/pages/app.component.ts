@@ -10,7 +10,7 @@ import { DevAuthService } from '../services/DevAuth/dev-auth.service';
 export class AppComponent {
   title = 'app';
 
-  constructor(private router: Router, private devAuthService: DevAuthService) {}
+  constructor(private router: Router, public devAuthService: DevAuthService) {}
 
   ngOnInit() {
     this.router.navigateByUrl("/");

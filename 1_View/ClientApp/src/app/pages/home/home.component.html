@@ -1,1 +1,28 @@
-<p>home works!</p>
+<div class="home_items_container">
+    <mat-card class="home_item_container">
+        <table mat-table [dataSource]="dataSource" class="new_team_table">
+            <!-- Position Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef width ="15%">Id</th>
+              <td mat-cell *matCellDef="let element" class="new_team_table_item"> {{element.id}} </td>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef width ="35%">Name</th>
+              <td mat-cell *matCellDef="let element"class="new_team_table_item"> {{element.name}} </td>
+            </ng-container>
+            <!-- Weight Column -->
+            <ng-container matColumnDef="creator">
+              <th mat-header-cell *matHeaderCellDef width ="35%">Creator</th>
+              <td mat-cell *matCellDef="let element"class="new_team_table_item"> {{element.creator}} </td>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="amountOfMembers">
+              <th mat-header-cell *matHeaderCellDef width ="15%">Members</th>
+              <td mat-cell *matCellDef="let element"class="new_team_table_item"> {{element.amountOfMembers}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns" class="new_team_table_header"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="new_team_table_data"></tr>
+          </table>
+    </mat-card>
+</div>

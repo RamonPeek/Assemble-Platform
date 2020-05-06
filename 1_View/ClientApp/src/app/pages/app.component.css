@@ -6,6 +6,7 @@
     left: 190px;
     background-color: rgb(123, 31, 162);
     padding: 10px;
+    overflow-y: scroll;
 }
 
 .dev_authorize_button_online {
@@ -22,6 +23,10 @@
     position: fixed;
     right: 10px;
     bottom: 55px;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 @media only screen and (max-width: 1250px) {

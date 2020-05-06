@@ -9,7 +9,7 @@ import { DevAuthService } from 'src/app/services/DevAuth/dev-auth.service';
 })
 export class NavigationSideComponent implements OnInit {
 
-  constructor(private devAuthService: DevAuthService) {
+  constructor(public devAuthService: DevAuthService) {
 
   }
 
