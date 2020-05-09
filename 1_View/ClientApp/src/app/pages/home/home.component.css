@@ -8,8 +8,9 @@
     margin-bottom: 10px;
     margin-right: 10px;
     float: left;
-    min-height: 100px;
+    height: 210px;
 }
+
 
 .new_team_table {
     width: 100%;
@@ -29,15 +30,37 @@
     padding-top: 8px;
 }
 
+
+.home_graph_container {
+    background-color: #161616;
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+    margin-right: 10px;
+    float: left;
+    height: 210px;
+}
+
+.home_graph_used_heroes {
+    width: 100%;
+    margin-left: calc(50% - 150px);
+}
+
+.home_item_header_text {
+    font-size: 13pt;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
 @media only screen and (max-width: 900px) {
     .home_items_container {
         width: 100%;
     }
     
     .home_item_container {
-        background-color: #161616;
         width: 100%;
-        margin-bottom: 10px;
-        min-height: 100px;
+    }
+    
+    .home_graph_container {
+        width: 100%;
     }
 }

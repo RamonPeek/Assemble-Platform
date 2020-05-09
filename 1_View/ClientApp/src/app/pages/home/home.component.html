@@ -25,4 +25,15 @@
             <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="new_team_table_data"></tr>
           </table>
     </mat-card>
+    <mat-card class="home_graph_container">
+      <p class="home_item_header_text">Used Characters</p>
+      <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            class="home_graph_used_heroes">
+    </canvas>
+    </mat-card>
 </div>

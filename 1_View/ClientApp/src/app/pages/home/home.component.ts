@@ -18,7 +18,23 @@ export class HomeComponent implements OnInit {
     {id: 5, name: 'Team 5', creator: 'Ramon', amountOfMembers: 1},
   ];
 
+  barChartOptions = {
+    scaleShowVerticalLines: false,
+    responsive: false,
+    legend: {
+      display: true,
+      position: 'right',
+    }
+  };
+  barChartLabels = ['Ironman', 'Hulk', 'Captain America', 'Thor', 'Black widow'];
+  barChartType = 'pie';
+  barChartLegend = true;
+  barChartData = [
+    {data: [65, 59, 80, 81, 56] }
+  ];
+
   ngOnInit() {
+
   }
 
 }
